@@ -1,0 +1,100 @@
+<div class="grid md:grid-cols-2 gap-8 animate-fade-in">
+  <!-- Education Details -->
+  <div
+    class="bg-black bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-yellow-400 transition-all duration-300"
+  >
+    <h3 class="text-xl font-bold text-yellow-400 mb-6 flex items-center">
+      <i class="fas fa-graduation-cap mr-3"></i>
+      Education
+    </h3>
+
+    <!-- University Info -->
+    <div class="space-y-6">
+      <div class="flex items-center gap-4">
+        <div class="p-3 bg-yellow-400 bg-opacity-20 rounded-full">
+          <i class="fas fa-university text-yellow-400 text-2xl"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold text-white">
+            Da Nang University of Science and Technology
+          </h4>
+          <p class="text-gray-400">Bachelor of Information Technology</p>
+        </div>
+      </div>
+
+      <!-- Academic Details -->
+      <div class="space-y-4 pl-6 border-l-2 border-yellow-400">
+        <div class="relative">
+          <div
+            class="absolute -left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 bg-yellow-400 rounded-full"
+          ></div>
+          <p class="text-gray-300">
+            <i class="fas fa-calendar-alt text-yellow-400 mr-2"></i>
+            2021 - 2025 (Expected)
+          </p>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute -left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 bg-yellow-400 rounded-full"
+          ></div>
+          <p class="text-gray-300">
+            <i class="fas fa-star text-yellow-400 mr-2"></i>
+            GPA: 3.14/4.0 (Accumulated)
+          </p>
+        </div>
+        <div class="relative">
+          <div
+            class="absolute -left-[29px] top-1/2 -translate-y-1/2 w-4 h-4 bg-yellow-400 rounded-full"
+          ></div>
+          <p class="text-gray-300">
+            <i class="fas fa-chart-line text-yellow-400 mr-2"></i>
+            Latest GPA: 3.67/4.0
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video Section -->
+  <div class="relative rounded-xl overflow-hidden group">
+    <iframe
+      width="928"
+      height="522"
+      src="https://www.youtube.com/embed/F4B7x15rdUg?autoplay=1&mute=1&loop=1&playlist=F4B7x15rdUg"
+      title="Đại học Bách Khoa Đà Nẵng nhìn từ trên cao - Flycam 4k!"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen
+      class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+    ></iframe>
+
+    <!-- Overlay with University Info -->
+    <div
+      class="absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+    >
+      <h4 class="text-2xl font-bold text-yellow-400 mb-4">Here's my University - DUT</h4>
+      <p class="text-gray-300 leading-relaxed">
+        Experience the vibrant academic environment at Da Nang University of
+        Science and Technology, where innovation meets excellence.
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+  @keyframes pulse-dot {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  .relative:hover .w-4.h-4 {
+    animation: pulse-dot 1s infinite;
+  }
+</style>

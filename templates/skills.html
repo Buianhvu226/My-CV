@@ -1,0 +1,178 @@
+<div class="grid md:grid-cols-2 gap-8 animate-fade-in p-4">
+  <!-- Core Skills -->
+  <div class="space-y-6">
+    <div
+      class="bg-black bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-yellow-400 transition-all duration-300"
+    >
+      <h3 class="text-xl font-bold text-yellow-400 mb-4 flex items-center">
+        <i class="fas fa-code mr-3"></i>
+        Core Skills
+      </h3>
+      <div class="space-y-4 text-gray-300 leading-relaxed">
+        <p>
+          As a fourth-year student, I always seek to expose myself to
+          interesting and beneficial knowledge, especially in new technologies
+          and other fields. My journey has equipped me with strong foundations
+          in:
+        </p>
+
+        <ul class="list-disc list-inside space-y-2 pl-4">
+          <li>Object-Oriented Programming (OOP)</li>
+          <li>Model-View-Controller (MVC) Architecture</li>
+          <li>API Design and Implementation</li>
+          <li>Web Technologies Development</li>
+        </ul>
+      </div>
+
+      <!-- Technology Carousel -->
+      <div class="tech-carousel mt-6 overflow-hidden relative">
+        <div class="tech-track flex animate-scroll md:space-x-7">
+          <div class="tech-item">
+            <i class="fab fa-python text-blue-400"></i>
+            <span>Python</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-js text-yellow-300"></i>
+            <span>JavaScript</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-html5 text-orange-500"></i>
+            <span>HTML5</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-css3-alt text-blue-500"></i>
+            <span>CSS3</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-php text-green-400"></i>
+            <span>PHP</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-windows text-blue-400"></i>
+            <span>C#</span>
+          </div>
+          <div class="tech-item">
+            <i class="fab fa-java text-red-400"></i>
+            <span>Java</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Frameworks & Technologies -->
+  <div class="space-y-6">
+    <div
+      class="bg-black bg-opacity-40 p-6 rounded-xl border border-gray-700 hover:border-yellow-400 transition-all duration-300"
+    >
+      <h3 class="text-xl font-bold text-yellow-400 mb-4 flex items-center">
+        <i class="fas fa-layer-group mr-3"></i>
+        Frameworks & Technologies
+      </h3>
+      <div class="space-y-4 text-gray-300 leading-relaxed">
+        <p>
+          My practical experience extends to modern frameworks and data science
+          technologies:
+        </p>
+
+        <div class="grid grid-cols-1 gap-4 mt-4">
+          <div class="framework-card group">
+            <div class="flex items-center gap-3">
+              <i class="fab fa-microsoft text-purple-400 text-2xl"></i>
+              <div>
+                <h4 class="text-yellow-400">.NET Framework</h4>
+                <p class="text-sm text-gray-400">
+                  Single-Page Applications & .NET Core
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="framework-card group">
+            <div class="flex items-center gap-3">
+              <i class="fab fa-python text-green-400 text-2xl"></i>
+              <div>
+                <h4 class="text-yellow-400">Django</h4>
+                <p class="text-sm text-gray-400">
+                  Web Applications & Data Science - Machine Learning
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="framework-card group">
+            <div class="flex items-center gap-3">
+              <i
+                class="fab fa-react text-cyan-400 text-2xl animate-spin-slow"
+              ></i>
+              <div>
+                <h4 class="text-yellow-400">React JS</h4>
+                <p class="text-sm text-gray-400">
+                  Frontend Development & UI Components
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .tech-carousel {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 20%,
+      black 80%,
+      transparent
+    );
+  }
+
+  .tech-track {
+    animation: scroll 20s linear infinite;
+  }
+
+  .tech-item {
+    @apply flex flex-col items-center justify-center min-w-[100px] p-4 mx-4
+           bg-black bg-opacity-30 rounded-lg border border-gray-700
+           hover:border-yellow-400 hover:scale-105 transition-all duration-300;
+  }
+
+  .tech-item i {
+    @apply text-2xl mb-2;
+  }
+
+  .tech-item span {
+    @apply text-sm text-gray-300;
+  }
+
+  .framework-card {
+    @apply p-4 bg-black bg-opacity-30 rounded-lg
+           border border-gray-700 hover:border-yellow-400 transition-all duration-300
+           transform hover:-translate-y-1;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-spin-slow {
+    animation: spin 4s linear infinite;
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>

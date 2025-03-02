@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bùi Anh Vũ - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/scrollreveal/4.0.9/scrollreveal.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar flex justify-between px-10 py-4 text-white text-lg">
+      <a
+        href="/"
+        class="font-bold text-2xl hover:text-yellow-400 transition-colors"
+        >Bùi Anh Vũ - My CV</a
+      >
+      <div class="flex space-x-6">
+        <a
+          href="#about"
+          class="text-white hover:text-yellow-400 transition-colors"
+          >About Me</a
+        >
+        <a
+          href="#experiences"
+          class="text-white hover:text-yellow-400 transition-colors"
+          >Experiences</a
+        >
+        <a
+          href="#projects"
+          class="text-white hover:text-yellow-400 transition-colors"
+          >Projects</a
+        >
+        <a
+          href="#contact"
+          class="text-white hover:text-yellow-400 transition-colors"
+          >Contact</a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section - Profile Card as default landing page -->
+    <section
+      id="hero"
+      class="min-h-screen flex items-center justify-center relative"
+    >
+      <video autoplay loop muted class="video-background">
+        <source src="media/bg-vid.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Profile Card -->
+      <div
+        class="container mx-auto px-4 transform transition-all duration-500 hover:scale-105"
+      >
+        <div
+          class="bg-black bg-opacity-60 p-8 rounded-xl shadow-2xl border border-gray-700"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-8">
+            <!-- Avatar with hover effect -->
+            <div class="relative group">
+              <img
+                src="media/ava.jpg"
+                alt="Bùi Anh Vũ"
+                class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-xl group-hover:border-white transition-all duration-300"
+              />
+              <div
+                class="absolute inset-0 bg-black bg-opacity-40 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                <span class="text-white text-xl font-semibold">Bùi Anh Vũ</span>
+              </div>
+            </div>
+
+            <!-- Profile Info with typing effect -->
+            <div class="text-center md:text-left space-y-6 flex-1">
+              <div>
+                <h1
+                  id="typing-text"
+                  class="text-5xl font-extrabold text-white mb-4"
+                ></h1>
+                <script></script>
+                <p
+                  class="text-2xl text-white flex items-center gap-3 justify-center md:justify-start"
+                >
+                  <i class="fas fa-laptop-code text-yellow-400"></i>
+                  IT Student | Software Developer
+                </p>
+              </div>
+
+              <!-- Quick Links -->
+              <div class="flex gap-4 justify-center md:justify-start">
+                <a
+                  href="#about"
+                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-user-circle"></i>
+                  About Me
+                </a>
+                <a
+                  href="#experiences"
+                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-briefcase"></i>
+                  Experiences
+                </a>
+
+                <a
+                  href="#projects"
+                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-code"></i>
+                  Projects
+                </a>
+                <a
+                  href="#contact"
+                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                >
+                  <i class="fas fa-envelope"></i>
+                  Contact
+                </a>
+              </div>
+
+              <!-- Social Links -->
+              <div class="flex gap-4 text-2xl justify-center md:justify-start">
+                <a
+                  href="https://github.com/Buianhvu226"
+                  class="text-gray-300 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fab fa-github"></i>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/anh-v%C5%A9-b%C3%B9i-6b287830a/"
+                  class="text-gray-300 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a
+                  href="mailto:buianhvu226@gmail.com"
+                  class="text-gray-300 hover:text-yellow-400 transition-colors"
+                >
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="min-h-screen pt-20">
+      <!-- Profile Container -->
+      <div class="container mx-auto px-4">
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">
+            <i class="fas fa-user-circle mr-3"></i>About Me
+          </h2>
+        </div>
+        <!-- Info Tabs -->
+        <div
+          class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700"
+        >
+          <!-- Tab Navigation -->
+          <div class="flex space-x-4 mb-6">
+            <button
+              class="tab-btn active px-4 py-2 rounded-lg transition-all"
+              data-tab="overview"
+            >
+              <i class="fas fa-user-circle mr-2"></i>Overview
+            </button>
+            <button
+              class="tab-btn px-4 py-2 rounded-lg transition-all"
+              data-tab="skills"
+            >
+              <i class="fas fa-code mr-2"></i>Skills
+            </button>
+            <button
+              class="tab-btn px-4 py-2 rounded-lg transition-all"
+              data-tab="education"
+            >
+              <i class="fas fa-graduation-cap mr-2"></i>Education
+            </button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="tab-content text-gray-300">
+            <!-- Content will be dynamically loaded here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experiences Section -->
+    <section id="experiences" class="min-h-screen pt-20">
+      <!-- Profile Container -->
+      <div class="container mx-auto px-4">
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">
+            <i class="mr-3"></i>Experiences
+          </h2>
+        </div>
+        <!-- Info Tabs -->
+        <div
+          class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700"
+        >
+          <!-- Tab Navigation -->
+          <div class="flex space-x-4 mb-6">
+            <button
+              class="exp-tab-btn active px-4 py-2 rounded-lg transition-all"
+              data-tab="sucodev"
+            >
+              <i class="mr-2"></i>Sucodev Company
+            </button>
+            <button
+              class="exp-tab-btn px-4 py-2 rounded-lg transition-all"
+              data-tab="dac"
+            >
+              <i class="mr-2"></i>DAC - Data Technology Vietnam (Now)
+            </button>
+          </div>
+
+          <!-- Tab Content -->
+          <div class="exp-tab-content text-gray-300">
+            <!-- Content will be dynamically loaded here -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="min-h-screen pt-20 pb-20">
+      <div class="container mx-auto px-4">
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">
+            <i class="fas fa-code mr-3"></i>Projects
+          </h2>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Data Science Project Card -->
+          <div class="group">
+            <div
+              class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-400 transition-all duration-500 h-full transform hover:-translate-y-2"
+            >
+              <!-- Project Header -->
+              <div class="flex items-center justify-between mb-4">
+                <h3
+                  class="text-2xl font-bold text-yellow-400 flex items-center"
+                >
+                  <i class="fas fa-brain mr-3"></i>
+                  Data Science Project
+                </h3>
+                <span class="text-sm text-gray-400">May, 2024</span>
+              </div>
+
+              <!-- Project Image/Animation -->
+              <div
+                class="relative overflow-hidden rounded-lg mb-6 group-hover:shadow-2xl"
+              >
+                <div
+                  class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 p-4 rounded-lg"
+                >
+                  <div class="grid grid-cols-2 gap-4 animate-pulse">
+                    <div
+                      class="h-24 bg-black bg-opacity-30 rounded-lg flex items-center justify-center"
+                    >
+                      <i class="fas fa-chart-line text-4xl text-white"></i>
+                    </div>
+                    <div
+                      class="h-24 bg-black bg-opacity-30 rounded-lg flex items-center justify-center"
+                    >
+                      <i class="fas fa-robot text-4xl text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Description -->
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                A comprehensive data analysis project focusing on Patek Philippe
+                watches, involving data crawling, cleaning, and AI model
+                development for price prediction.
+              </p>
+
+              <!-- Key Features -->
+              <div class="mb-6">
+                <h4 class="text-yellow-400 font-semibold mb-2">
+                  Key Features:
+                </h4>
+                <ul class="list-disc list-inside text-gray-300 space-y-1">
+                  <li>Data crawling and cleaning automation</li>
+                  <li>Advanced statistical analysis</li>
+                  <li>
+                    AI model implementation (KMeans, Neural Network, XGBoost)
+                  </li>
+                  <li>Price prediction system</li>
+                </ul>
+              </div>
+
+              <!-- Technologies -->
+              <div class="flex justify-between">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm"
+                    >Python</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm"
+                    >Pandas</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full text-sm"
+                    >Seaborn</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-400 rounded-full text-sm"
+                    >scikit-learn</span
+                  >
+                </div>
+
+                <!-- Link to GitHub -->
+                <div class="flex justify-end">
+                  <a
+                    href="https://github.com/Buianhvu226/DataScience/tree/Main/KHDL_CK"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 group/link"
+                  >
+                    <i
+                      class="fab fa-github text-xl group-hover/link:rotate-12 transition-transform"
+                    ></i>
+                    <span>View on GitHub</span>
+                    <i
+                      class="fas fa-external-link-alt text-sm group-hover/link:translate-x-1 transition-transform"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Finding Tutors Website Card -->
+          <div class="group">
+            <div
+              class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-400 transition-all duration-500 h-full transform hover:-translate-y-2"
+            >
+              <!-- Project Header -->
+              <div class="flex items-center justify-between mb-4">
+                <h3
+                  class="text-2xl font-bold text-yellow-400 flex items-center"
+                >
+                  <i class="fas fa-chalkboard-teacher mr-3"></i>
+                  Finding Tutors Website
+                </h3>
+                <span class="text-sm text-gray-400">October, 2024</span>
+              </div>
+
+              <!-- Project Image/Animation -->
+              <div
+                class="relative overflow-hidden rounded-lg mb-6 group-hover:shadow-2xl"
+              >
+                <div
+                  class="bg-gradient-to-r from-green-500 via-teal-500 to-blue-500 p-4 rounded-lg"
+                >
+                  <div class="grid grid-cols-3 gap-4">
+                    <div
+                      class="h-24 bg-black bg-opacity-30 rounded-lg flex items-center justify-center"
+                    >
+                      <i class="fab fa-react text-4xl text-white"></i>
+                    </div>
+                    <div
+                      class="h-24 bg-black bg-opacity-30 rounded-lg flex items-center justify-center"
+                    >
+                      <i class="fab fa-python text-4xl text-white"></i>
+                    </div>
+                    <div
+                      class="h-24 bg-black bg-opacity-30 rounded-lg flex items-center justify-center"
+                    >
+                      <i class="fas fa-database text-4xl text-white"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project Description -->
+              <p class="text-gray-300 mb-6 leading-relaxed">
+                A Scrum-based team project creating a platform for connecting
+                tutors with students. Enhanced version of a previous academic
+                project, featuring modern technologies and improved UX.
+              </p>
+
+              <!-- Key Features -->
+              <div class="mb-6">
+                <h4 class="text-yellow-400 font-semibold mb-2">
+                  Key Features:
+                </h4>
+                <ul class="list-disc list-inside text-gray-300 space-y-1">
+                  <li>Frontend CRUD operations</li>
+                  <li>RESTful API integration</li>
+                  <li>Responsive design</li>
+                  <li>User authentication system</li>
+                </ul>
+              </div>
+
+              <!-- Technologies -->
+              <div class="flex justify-between">
+                <div class="flex flex-wrap gap-2">
+                  <span
+                    class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm"
+                    >React JS</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm"
+                    >Django</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full text-sm"
+                    >SQLite</span
+                  >
+                  <span
+                    class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-400 rounded-full text-sm"
+                    >.NET (Previous)</span
+                  >
+                </div>
+
+                <!-- Link to GitHub -->
+                <div class="flex justify-end">
+                  <a
+                    href="https://github.com/dhph17/FE_SCRUM"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all duration-300 group/link"
+                  >
+                    <i
+                      class="fab fa-github text-xl group-hover/link:rotate-12 transition-transform"
+                    ></i>
+                    <span>View on GitHub</span>
+                    <i
+                      class="fas fa-external-link-alt text-sm group-hover/link:translate-x-1 transition-transform"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen pt-20 pb-20">
+      <div class="container mx-auto px-4">
+        <div class="p-6">
+          <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">
+            <i class="fas fa-envelope mr-3"></i>Contact Me
+          </h2>
+        </div>
+
+        <!-- Contact Card -->
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="bg-black bg-opacity-60 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-400 transition-all duration-500"
+          >
+            <!-- Profile Image and Desire Statement -->
+            <div class="mb-8 flex flex-col items-center">
+              <!-- Animated Profile Container -->
+              <div class="relative w-48 h-48 mb-6 group perspective">
+                <!-- Main Image -->
+                <div
+                  class="relative w-full h-full transform transition-transform duration-500 preserve-3d group-hover:rotate-y-180"
+                >
+                  <!-- Front -->
+                  <img
+                    src="media/ava.jpg"
+                    alt="Bùi Anh Vũ"
+                    class="absolute w-full h-full rounded-full object-cover border-4 border-yellow-400 shadow-xl backface-hidden"
+                  />
+                  <!-- Back -->
+                  <div
+                    class="absolute w-full h-full rounded-full bg-yellow-400 bg-opacity-20 backdrop-blur-sm border-4 border-yellow-400 flex items-center justify-center backface-hidden rotate-y-180"
+                  >
+                    <span
+                      class="text-white text-lg font-semibold text-center px-4"
+                      >Let's Connect!</span
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- Animated Quote -->
+              <div class="text-center relative overflow-hidden">
+                <p class="text-gray-300 text-lg italic animate-fade-in">
+                  "I aspire to showcase my skills and abilities within the
+                  company as an intern."
+                </p>
+              </div>
+            </div>
+
+            <!-- Contact Grid -->
+            <div class="grid md:grid-cols-2 gap-8">
+              <!-- Contact Information -->
+              <div class="space-y-6">
+                <h3
+                  class="text-xl font-bold text-yellow-400 mb-4 flex items-center"
+                >
+                  <i class="fas fa-id-card mr-2"></i>Contact Information
+                </h3>
+
+                <!-- Contact Items -->
+                <div class="space-y-4">
+                  <!-- Phone -->
+                  <div
+                    class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
+                  >
+                    <i class="fas fa-phone text-xl w-8"></i>
+                    <a href="tel:+84397706626" class="hover:underline"
+                      >0934621364</a
+                    >
+                  </div>
+
+                  <!-- Email -->
+                  <div
+                    class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
+                  >
+                    <i class="fas fa-envelope text-xl w-8"></i>
+                    <a
+                      href="mailto:buianhvu226@gmail.com"
+                      class="hover:underline"
+                      >buianhvu226@gmail.com</a
+                    >
+                  </div>
+
+                  <!-- Github -->
+                  <div
+                    class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
+                  >
+                    <i class="fab fa-github text-xl w-8"></i>
+                    <a
+                      href="https://github.com/Buianhvu226"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      >github.com/Buianhvu226</a
+                    >
+                  </div>
+
+                  <!-- Facebook -->
+                  <div
+                    class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
+                  >
+                    <i class="fab fa-facebook text-xl w-8"></i>
+                    <a
+                      href="https://www.facebook.com/yourusername"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="hover:underline"
+                      >Bùi Anh Vũ</a
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <!-- CV Section -->
+              <div class="flex flex-col justify-center items-center space-y-6">
+                <div class="text-center space-y-4">
+                  <h3 class="text-xl font-bold text-yellow-400">
+                    <i class="fas fa-globe mr-2"></i>View My Online CV
+                  </h3>
+                  <p class="text-gray-300">
+                    Explore my detailed curriculum vitae
+                  </p>
+                  <a
+                    href="#"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-lg hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105 group"
+                  >
+                    <i
+                      class="fas fa-external-link-alt group-hover:rotate-12 transition-transform"
+                    ></i>
+                    <span>View Online CV</span>
+                    <i
+                      class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"
+                    ></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // Initialize ScrollReveal
+      ScrollReveal().reveal(".container > div", {
+        delay: 200,
+        distance: "50px",
+        origin: "bottom",
+        interval: 200,
+      });
+    </script>
+    <script src="js/tabs.js" type="module"></script>
+    <script src="js/profile.js" type="module"></script>
+    <script src="js/experience-tabs.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>
