@@ -4,14 +4,11 @@
                    background: #111827;
                    color: #f3f4f6;
                    overflow-y: scroll;
-                   /* Đảm bảo luôn có scrollbar */
                }
 
-               /* Thêm styles mới cho scroll behavior */
                html {
                    scroll-behavior: smooth;
                    scroll-padding-top: 4rem;
-                   /* Tránh bị nav che khi scroll */
                }
 
                /* Navigation */
@@ -24,7 +21,7 @@
                    z-index: 1000;
                }
 
-               /* Background Video */
+               /* bg-vid */
                .video-background {
                    position: absolute;
                    top: 0;
@@ -58,7 +55,7 @@
                    color: #fbbf24;
                }
 
-               /* Thêm vào phần style trong head */
+               /* style head */
                @keyframes blink {
 
                    0%,
@@ -76,7 +73,6 @@
          .tech-badge {
               position: absolute;
               width: 120px;
-              /* Increased from 10px to accommodate content */
               opacity: 0;
               top: 50%;
               left: 50%;
@@ -148,8 +144,7 @@
                   background-position: 0% 50%;
               }
           }
-
-                        /* Add these styles to your CSS */
+          
                         .perspective {
                             perspective: 1000px;
                         }
