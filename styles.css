@@ -1,200 +1,202 @@
-               /* Base Styles */
-               body {
-                   scroll-behavior: smooth;
-                   background: #111827;
-                   color: #f3f4f6;
-                   overflow-y: scroll;
-               }
 
-               html {
-                   scroll-behavior: smooth;
-                   scroll-padding-top: 4rem;
-               }
+body {
+scroll-behavior: smooth;
+background: #111827;
+color: #f3f4f6;
+overflow-y: scroll;
+}
 
-               /* Navigation */
-               .navbar {
-                   position: fixed;
-                   top: 0;
-                   width: 100%;
-                   background: rgba(0, 0, 0, 0.7);
-                   backdrop-filter: blur(10px);
-                   z-index: 1000;
-               }
+html {
+scroll-behavior: smooth;
+scroll-padding-top: 4rem;
+}
 
-               /* bg-vid */
-               .video-background {
-                   position: absolute;
-                   top: 0;
-                   left: 0;
-                   width: 100%;
-                   height: 100%;
-                   object-fit: cover;
-                   opacity: 0.3;
-                   z-index: -1;
-               }
+.navbar {
+position: fixed;
+top: 0;
+width: 100%;
+background: rgba(0, 0, 0, 0.7);
+backdrop-filter: blur(10px);
+z-index: 1000;
+}
 
-               /* Animations */
-               @keyframes fadeIn {
-                   from {
-                       opacity: 0;
-                       transform: translateY(20px);
-                   }
+.video-background {
+object-fit: cover;
+width: 100%;
+height: 100%;
+position: absolute;
+top: 0;
+left: 0;
+z-index: 0;
+filter: blur(5px);
+}
 
-                   to {
-                       opacity: 1;
-                       transform: translateY(0);
-                   }
-               }
+@media (max-width: 640px) {
+.action-buttons {
+flex-direction: column;
+align-items: stretch;
+}
 
-               .tab-content {
-                   animation: fadeIn 0.5s ease-out;
-               }
+.action-buttons a {
+width: 100%;
+justify-content: center;
+}
+}
 
-               .tab-btn.active {
-                   background: rgba(251, 191, 36, 0.2);
-                   color: #fbbf24;
-               }
+@keyframes fadeIn {
+from {
+opacity: 0;
+transform: translateY(20px);
+}
 
-               /* style head */
-               @keyframes blink {
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
 
-                   0%,
-                   100% {
-                       opacity: 1;
-                   }
+.tab-content {
+animation: fadeIn 0.5s ease-out;
+}
 
-                   50% {
-                       opacity: 0;
-                   }
-               }
+.tab-btn.active {
+background: rgba(251, 191, 36, 0.2);
+color: #fbbf24;
+}
 
-               
-         
-         .tech-badge {
-              position: absolute;
-              width: 120px;
-              opacity: 0;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%) rotate(0deg) translateX(120px);
-              animation: appearAndRotate 0.5s ease-out forwards;
-              animation-delay: calc(var(--index) * 0.2s);
-              display: flex;
-              align-items: center;
-              gap: 2px;
-              padding: 0.75rem;
-              background: rgba(0, 0, 0, 0.3);
-              border-radius: 0.5rem;
-              border: 1px solid rgb(55, 65, 81);
-          }
+@keyframes blink {
 
-          @keyframes appearAndRotate {
-              0% {
-                  opacity: 0;
-                  transform: translate(-50%, -50%) rotate(0deg) translateX(120px);
-              }
+0%,
+100% {
+opacity: 1;
+}
 
-              100% {
-                  opacity: 1;
-                  transform: translate(-50%, -50%) rotate(calc(var(--index) * 72deg))
-                      /* Changed from 90deg to 72deg (360/5) */
-                      translateX(120px) rotate(calc(var(--index) * -72deg));
-                  /* Also changed to -72deg */
-              }
-          }
+50% {
+opacity: 0;
+}
+}
 
-          .tech-badge:hover {
-              border-color: rgb(251, 191, 36);
-              transform: translate(-50%, -50%) rotate(calc(var(--index) * 72deg)) translateX(120px) rotate(calc(var(--index) * -72deg)) scale(1.1);
-          }
 
-          /* Add these styles to your existing stylesheet */
-          .group:hover .animate-pulse {
-              animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-          }
 
-          @keyframes pulse {
+.tech-badge {
+position: absolute;
+width: 120px;
+opacity: 0;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%) rotate(0deg) translateX(120px);
+animation: appearAndRotate 0.5s ease-out forwards;
+animation-delay: calc(var(--index) * 0.2s);
+display: flex;
+align-items: center;
+gap: 2px;
+padding: 0.75rem;
+background: rgba(0, 0, 0, 0.3);
+border-radius: 0.5rem;
+border: 1px solid rgb(55, 65, 81);
+}
 
-              0%,
-              100% {
-                  opacity: 1;
-              }
+@keyframes appearAndRotate {
+0% {
+opacity: 0;
+transform: translate(-50%, -50%) rotate(0deg) translateX(120px);
+}
 
-              50% {
-                  opacity: .5;
-              }
-          }
+100% {
+opacity: 1;
+transform: translate(-50%, -50%) rotate(calc(var(--index) * 72deg))
+translateX(120px) rotate(calc(var(--index) * -72deg));
+}
+}
 
-          /* Gradient animation */
-          .bg-gradient-to-r {
-              background-size: 200% 200%;
-              animation: gradient 15s ease infinite;
-          }
+.tech-badge:hover {
+border-color: rgb(251, 191, 36);
+transform: translate(-50%, -50%) rotate(calc(var(--index) * 72deg)) translateX(120px) rotate(calc(var(--index) * -72deg)) scale(1.1);
+}
 
-          @keyframes gradient {
-              0% {
-                  background-position: 0% 50%;
-              }
+.group:hover .animate-pulse {
+animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 
-              50% {
-                  background-position: 100% 50%;
-              }
+@keyframes pulse {
 
-              100% {
-                  background-position: 0% 50%;
-              }
-          }
-          
-                        .perspective {
-                            perspective: 1000px;
-                        }
-            
-                        .preserve-3d {
-                            transform-style: preserve-3d;
-                        }
-            
-                        .backface-hidden {
-                            backface-visibility: hidden;
-                        }
-            
-                        .rotate-y-180 {
-                            transform: rotateY(180deg);
-                        }
-            
-                        /* Floating animation for profile image */
-                        .group:hover .floating {
-                            animation: floating 3s ease-in-out infinite;
-                        }
-            
-                        @keyframes floating {
-            
-                            0%,
-                            100% {
-                                transform: translateY(0);
-                            }
-            
-                            50% {
-                                transform: translateY(-10px);
-                            }
-                        }
-            
-                        /* Enhanced hover effects for contact links */
-                        .contact-link {
-                            position: relative;
-                            overflow: hidden;
-                        }
-            
-                        .contact-link::after {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 0;
-                            height: 0.5rem;
-                            background-color: #fbbf24;
-                            transition: all 0.3s;
-                        }
-            
-                        .contact-link:hover::after {
-                            width: 100%;
-                        }
+0%,
+100% {
+opacity: 1;
+}
+
+50% {
+opacity: .5;
+}
+}
+
+.bg-gradient-to-r {
+background-size: 200% 200%;
+animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+0% {
+background-position: 0% 50%;
+}
+
+50% {
+background-position: 100% 50%;
+}
+
+100% {
+background-position: 0% 50%;
+}
+}
+
+.perspective {
+perspective: 1000px;
+}
+
+.preserve-3d {
+transform-style: preserve-3d;
+}
+
+.backface-hidden {
+backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+transform: rotateY(180deg);
+}
+
+.group:hover .floating {
+animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+
+0%,
+100% {
+transform: translateY(0);
+}
+
+50% {
+transform: translateY(-10px);
+}
+}
+
+.contact-link {
+position: relative;
+overflow: hidden;
+}
+
+.contact-link::after {
+content: '';
+position: absolute;
+bottom: 0;
+left: 0;
+width: 0;
+height: 0.5rem;
+background-color: #fbbf24;
+transition: all 0.3s;
+}
+
+.contact-link:hover::after {
+width: 100%;
+}

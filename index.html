@@ -10,128 +10,145 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-    />
 
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
 
   <body>
-    <!-- Navigation -->
-    <nav class="navbar flex justify-between px-10 py-4 text-white text-lg">
+    <!-- Navbar -->
+    <nav
+      class="navbar flex justify-between px-4 sm:px-10 py-4 text-white text-lg"
+    >
       <a
         href="/"
-        class="font-bold text-2xl hover:text-yellow-400 transition-colors"
-        >Bùi Anh Vũ - My CV</a
+        class="font-bold text-xl hover:text-yellow-400 transition-colors"
       >
-      <div class="flex space-x-6">
+        <i class="fas fa-home"></i>
+      </a>
+
+      <div class="flex space-x-4 sm:space-x-6">
         <a
           href="#about"
           class="text-white hover:text-yellow-400 transition-colors"
-          >About Me</a
         >
+          <i class="fas fa-user-circle"></i>
+          <span class="hidden sm:inline ml-2">About Me</span>
+        </a>
         <a
           href="#experiences"
           class="text-white hover:text-yellow-400 transition-colors"
-          >Experiences</a
         >
+          <i class="fas fa-briefcase"></i>
+          <span class="hidden sm:inline ml-2">Experiences</span>
+        </a>
         <a
           href="#projects"
           class="text-white hover:text-yellow-400 transition-colors"
-          >Projects</a
         >
+          <i class="fas fa-code"></i>
+          <span class="hidden sm:inline ml-2">Projects</span>
+        </a>
         <a
           href="#contact"
           class="text-white hover:text-yellow-400 transition-colors"
-          >Contact</a
         >
+          <i class="fas fa-envelope"></i>
+          <span class="hidden sm:inline ml-2">Contact</span>
+        </a>
       </div>
     </nav>
 
-    <!-- Hero Section - Profile Card as default landing page -->
+    <!-- Hero Section -->
     <section
       id="hero"
-      class="min-h-screen flex items-center justify-center relative"
+      class="min-h-screen w-screen flex items-center justify-center relative overflow-hidden"
     >
-      <video autoplay loop muted class="video-background">
+      <video
+        autoplay
+        loop
+        muted
+        class="video-background absolute inset-0 w-full h-full object-cover"
+      >
         <source src="media/bg-vid.mp4" type="video/mp4" />
       </video>
 
-      <!-- Profile Card -->
-      <div
-        class="container mx-auto px-4 transform transition-all duration-500 hover:scale-105"
-      >
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div
-          class="bg-black bg-opacity-60 p-8 rounded-xl shadow-2xl border border-gray-700"
+          class="bg-black bg-opacity-60 p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl border border-gray-700"
         >
-          <div class="flex flex-col md:flex-row items-center gap-8">
-            <!-- Avatar with hover effect -->
-            <div class="relative group">
+          <div
+            class="flex flex-col md:flex-row items-center gap-4 sm:gap-6 md:gap-8"
+          >
+            <div
+              class="relative group w-48 h-48 sm:w-56 sm:h-56 md:w-72 md:h-72"
+            >
               <img
                 src="media/ava.jpg"
                 alt="Bùi Anh Vũ"
-                class="w-72 h-72 rounded-full object-cover border-4 border-yellow-400 shadow-xl group-hover:border-white transition-all duration-300"
+                class="w-full h-full rounded-full object-cover border-4 border-yellow-400 shadow-xl group-hover:border-white transition-all duration-300"
               />
               <div
                 class="absolute inset-0 bg-black bg-opacity-40 rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                <span class="text-white text-xl font-semibold">Bùi Anh Vũ</span>
+                <span
+                  class="text-white text-base sm:text-lg md:text-xl font-semibold"
+                  >Bùi Anh Vũ</span
+                >
               </div>
             </div>
 
-            <!-- Profile Info with typing effect -->
-            <div class="text-center md:text-left space-y-6 flex-1">
+            <div
+              class="text-center md:text-left space-y-4 sm:space-y-5 md:space-y-6 flex-1"
+            >
               <div>
                 <h1
                   id="typing-text"
-                  class="text-5xl font-extrabold text-white mb-4"
+                  class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white mb-2 sm:mb-3 md:mb-4"
                 ></h1>
-                <script></script>
                 <p
-                  class="text-2xl text-white flex items-center gap-3 justify-center md:justify-start"
+                  class="text-lg sm:text-xl md:text-2xl text-white flex items-center gap-2 sm:gap-3 justify-center md:justify-start"
                 >
                   <i class="fas fa-laptop-code text-yellow-400"></i>
                   IT Student | Software Developer
                 </p>
               </div>
 
-              <!-- Quick Links -->
-              <div class="flex gap-4 justify-center md:justify-start">
+              <div
+                class="flex flex-wrap gap-2 sm:gap-3 md:gap-4 justify-center md:justify-start"
+              >
                 <a
                   href="#about"
-                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                  class="px-4 sm:px-5 md:px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 text-sm sm:text-base rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
                 >
                   <i class="fas fa-user-circle"></i>
-                  About Me
+                  <span class="hidden sm:inline">About Me</span>
                 </a>
                 <a
                   href="#experiences"
-                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                  class="px-4 sm:px-5 md:px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 text-sm sm:text-base rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
                 >
                   <i class="fas fa-briefcase"></i>
-                  Experiences
+                  <span class="hidden sm:inline">Experiences</span>
                 </a>
-
                 <a
                   href="#projects"
-                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                  class="px-4 sm:px-5 md:px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 text-sm sm:text-base rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
                 >
                   <i class="fas fa-code"></i>
-                  Projects
+                  <span class="hidden sm:inline">Projects</span>
                 </a>
                 <a
                   href="#contact"
-                  class="px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
+                  class="px-4 sm:px-5 md:px-6 py-2 bg-yellow-400 bg-opacity-20 text-yellow-400 text-sm sm:text-base rounded-full hover:bg-opacity-30 transition-all duration-300 flex items-center gap-2"
                 >
                   <i class="fas fa-envelope"></i>
-                  Contact
+                  <span class="hidden sm:inline">Contact</span>
                 </a>
               </div>
 
-              <!-- Social Links -->
-              <div class="flex gap-4 text-2xl justify-center md:justify-start">
+              <div
+                class="flex gap-4 text-xl sm:text-2xl justify-center md:justify-start"
+              >
                 <a
                   href="https://github.com/Buianhvu226"
                   class="text-gray-300 hover:text-yellow-400 transition-colors"
@@ -159,18 +176,17 @@
 
     <!-- About Section -->
     <section id="about" class="min-h-screen pt-20">
-      <!-- Profile Container -->
       <div class="container mx-auto px-4">
         <div class="p-6">
           <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">
             <i class="fas fa-user-circle mr-3"></i>About Me
           </h2>
         </div>
-        <!-- Info Tabs -->
+
         <div
           class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700"
         >
-          <!-- Tab Navigation -->
+          <!-- Tab Nav -->
           <div class="flex space-x-4 mb-6">
             <button
               class="tab-btn active px-4 py-2 rounded-lg transition-all"
@@ -193,27 +209,24 @@
           </div>
 
           <!-- Tab Content -->
-          <div class="tab-content text-gray-300">
-            <!-- Content will be dynamically loaded here -->
-          </div>
+          <div class="tab-content text-gray-300"></div>
         </div>
       </div>
     </section>
 
     <!-- Experiences Section -->
     <section id="experiences" class="min-h-screen pt-20">
-      <!-- Profile Container -->
       <div class="container mx-auto px-4">
         <div class="p-6">
           <h2 class="text-3xl font-bold text-yellow-400 mb-6 text-center">
             <i class="fas fa-briefcase mr-3"></i>Experiences
           </h2>
         </div>
-        <!-- Info Tabs -->
+
         <div
           class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700"
         >
-          <!-- Tab Navigation -->
+          <!-- Tab Nav -->
           <div class="flex space-x-4 mb-6">
             <button
               class="exp-tab-btn active px-4 py-2 rounded-lg transition-all"
@@ -230,9 +243,7 @@
           </div>
 
           <!-- Tab Content -->
-          <div class="exp-tab-content text-gray-300">
-            <!-- Dynamic Content -->
-          </div>
+          <div class="exp-tab-content text-gray-300"></div>
         </div>
       </div>
     </section>
@@ -246,14 +257,12 @@
           </h2>
         </div>
 
-        <!-- Projects Grid -->
         <div class="grid md:grid-cols-2 gap-8">
           <!-- Data Science Project Card -->
           <div class="group">
             <div
               class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-400 transition-all duration-500 h-full transform hover:-translate-y-2"
             >
-              <!-- Project Header -->
               <div class="flex items-center justify-between mb-4">
                 <h3
                   class="text-2xl font-bold text-yellow-400 flex items-center"
@@ -286,14 +295,12 @@
                 </div>
               </div>
 
-              <!-- Project Description -->
               <p class="text-gray-300 mb-6 leading-relaxed">
                 A comprehensive data analysis project focusing on Patek Philippe
                 watches, involving data crawling, cleaning, and AI model
                 development for price prediction.
               </p>
 
-              <!-- Key Features -->
               <div class="mb-6">
                 <h4 class="text-yellow-400 font-semibold mb-2">
                   Key Features:
@@ -308,28 +315,26 @@
                 </ul>
               </div>
 
-              <!-- Technologies -->
               <div class="flex justify-between">
                 <div class="flex flex-wrap gap-2">
                   <span
-                    class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm flex items-center"
                     >Python</span
                   >
                   <span
-                    class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm flex items-center"
                     >Pandas</span
                   >
                   <span
-                    class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full text-sm flex items-center"
                     >Seaborn</span
                   >
                   <span
-                    class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-400 rounded-full text-sm flex items-center"
                     >scikit-learn</span
                   >
                 </div>
 
-                <!-- Link to GitHub -->
                 <div class="flex justify-end">
                   <a
                     href="https://github.com/Buianhvu226/DataScience/tree/Main/KHDL_CK"
@@ -355,7 +360,6 @@
             <div
               class="bg-black bg-opacity-60 p-6 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-400 transition-all duration-500 h-full transform hover:-translate-y-2"
             >
-              <!-- Project Header -->
               <div class="flex items-center justify-between mb-4">
                 <h3
                   class="text-2xl font-bold text-yellow-400 flex items-center"
@@ -393,14 +397,12 @@
                 </div>
               </div>
 
-              <!-- Project Description -->
               <p class="text-gray-300 mb-6 leading-relaxed">
                 A Scrum-based team project creating a platform for connecting
                 tutors with students. Enhanced version of a previous academic
                 project, featuring modern technologies and improved UX.
               </p>
 
-              <!-- Key Features -->
               <div class="mb-6">
                 <h4 class="text-yellow-400 font-semibold mb-2">
                   Key Features:
@@ -413,28 +415,26 @@
                 </ul>
               </div>
 
-              <!-- Technologies -->
               <div class="flex justify-between">
                 <div class="flex flex-wrap gap-2">
                   <span
-                    class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-blue-500 bg-opacity-20 text-blue-400 rounded-full text-sm flex items-center"
                     >React JS</span
                   >
                   <span
-                    class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-green-500 bg-opacity-20 text-green-400 rounded-full text-sm flex items-center"
                     >Django</span
                   >
                   <span
-                    class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-purple-500 bg-opacity-20 text-purple-400 rounded-full text-sm flex items-center"
                     >SQLite</span
                   >
                   <span
-                    class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-400 rounded-full text-sm"
+                    class="px-3 py-1 bg-yellow-500 bg-opacity-20 text-yellow-400 rounded-full text-sm flex items-center"
                     >.NET (Previous)</span
                   >
                 </div>
 
-                <!-- Link to GitHub -->
                 <div class="flex justify-end">
                   <a
                     href="https://github.com/dhph17/FE_SCRUM"
@@ -455,7 +455,7 @@
             </div>
           </div>
         </div>
-        <!-- View more my projects on GitHub -->
+
         <div class="flex justify-center mt-8">
           <a
             href="https://github.com/Buianhvu226"
@@ -504,38 +504,23 @@
           </h2>
         </div>
 
-        <!-- Contact Card -->
         <div class="max-w-4xl mx-auto">
           <div
             class="bg-black bg-opacity-60 p-8 rounded-xl shadow-xl border border-gray-700 hover:border-yellow-400 transition-all duration-500"
           >
-            <!-- Profile Image and Desire Statement -->
             <div class="mb-8 flex flex-col items-center">
-              <!-- Animated Profile Container -->
               <div class="relative w-48 h-48 mb-6 group perspective">
-                <!-- Main Image -->
                 <div
                   class="relative w-full h-full transform transition-transform duration-500 preserve-3d group-hover:rotate-y-180"
                 >
-                  <!-- Front -->
                   <img
                     src="media/ava.jpg"
                     alt="Bùi Anh Vũ"
                     class="absolute w-full h-full rounded-full object-cover border-4 border-yellow-400 shadow-xl backface-hidden"
                   />
-                  <!-- Back -->
-                  <div
-                    class="absolute w-full h-full rounded-full bg-yellow-400 bg-opacity-20 backdrop-blur-sm border-4 border-yellow-400 flex items-center justify-center backface-hidden rotate-y-180"
-                  >
-                    <span
-                      class="text-white text-lg font-semibold text-center px-4"
-                      >Let's Connect!</span
-                    >
-                  </div>
                 </div>
               </div>
 
-              <!-- Animated Quote -->
               <div class="text-center relative overflow-hidden">
                 <p class="text-gray-300 text-lg italic animate-fade-in">
                   "I aspire to showcase my skills and abilities within the
@@ -544,9 +529,7 @@
               </div>
             </div>
 
-            <!-- Contact Grid -->
             <div class="grid md:grid-cols-2 gap-8">
-              <!-- Contact Information -->
               <div class="space-y-6">
                 <h3
                   class="text-xl font-bold text-yellow-400 mb-4 flex items-center"
@@ -554,9 +537,7 @@
                   <i class="fas fa-id-card mr-2"></i>Contact Information
                 </h3>
 
-                <!-- Contact Items -->
                 <div class="space-y-4">
-                  <!-- Phone -->
                   <div
                     class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
                   >
@@ -566,7 +547,6 @@
                     >
                   </div>
 
-                  <!-- Email -->
                   <div
                     class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
                   >
@@ -578,7 +558,6 @@
                     >
                   </div>
 
-                  <!-- Github -->
                   <div
                     class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
                   >
@@ -592,13 +571,12 @@
                     >
                   </div>
 
-                  <!-- Facebook -->
                   <div
                     class="flex items-center space-x-3 text-gray-300 hover:text-yellow-400 transition-colors"
                   >
                     <i class="fab fa-facebook text-xl w-8"></i>
                     <a
-                      href="https://www.facebook.com/yourusername"
+                      href="https://www.facebook.com/bui.vu.3576?mibextid=ZbWKwL"
                       target="_blank"
                       rel="noopener noreferrer"
                       class="hover:underline"
@@ -612,23 +590,22 @@
               <div class="flex flex-col justify-center items-center space-y-6">
                 <div class="text-center space-y-4">
                   <h3 class="text-xl font-bold text-yellow-400">
-                    <i class="fas fa-globe mr-2"></i>View My Online CV
+                    <i class="fas fa-file-pdf mr-2"></i> View - Download My CV
                   </h3>
                   <p class="text-gray-300">
-                    Explore my detailed curriculum vitae
+                    View - Download my detailed curriculum vitae in PDF format
                   </p>
                   <a
-                    href="My_CV/main.html"
+                    href="media/CV of BUI ANH VU.pdf"
                     target="_blank"
-                    rel="noopener noreferrer"
                     class="inline-flex items-center gap-2 px-6 py-3 bg-yellow-400 bg-opacity-20 text-yellow-400 rounded-lg hover:bg-opacity-30 transition-all duration-300 transform hover:scale-105 group"
                   >
                     <i
-                      class="fas fa-external-link-alt group-hover:rotate-12 transition-transform"
+                      class="fas fa-file-pdf group-hover:scale-110 transition-transform"
                     ></i>
-                    <span>View Online CV</span>
+                    <span>View my CV by clicking here</span>
                     <i
-                      class="fas fa-arrow-right group-hover:translate-x-2 transition-transform"
+                      class="fas fa-external-link-alt text-sm group-hover:translate-x-1 transition-transform"
                     ></i>
                   </a>
                 </div>
@@ -640,7 +617,6 @@
     </section>
 
     <script>
-      // Initialize ScrollReveal
       ScrollReveal().reveal(".container > div", {
         delay: 200,
         distance: "50px",
@@ -652,5 +628,6 @@
     <script src="js/profile.js" type="module"></script>
     <script src="js/experience-tabs.js"></script>
     <script src="js/navigation.js"></script>
+    <script src="js/responsive.js"></script>
   </body>
 </html>

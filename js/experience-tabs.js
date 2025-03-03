@@ -28,10 +28,8 @@ class ExperienceTabs {
 
   async switchTab(tabId) {
     try {
-      // Update active state and colors
       this.tabButtons.forEach((button) => {
         if (button.getAttribute("data-tab") === tabId) {
-          // Active tab styling
           button.classList.add(
             "active",
             "bg-yellow-400",
@@ -40,7 +38,6 @@ class ExperienceTabs {
           );
           button.classList.remove("text-gray-300");
         } else {
-          // Inactive tab styling
           button.classList.remove(
             "active",
             "bg-yellow-400",
@@ -51,7 +48,6 @@ class ExperienceTabs {
         }
       });
 
-      // Load and display content with fade animation
       const content = await this.loadTemplate(tabId);
       this.tabContent.style.opacity = "0";
       await new Promise((resolve) => setTimeout(resolve, 200));
@@ -63,10 +59,7 @@ class ExperienceTabs {
   }
 
   init() {
-    // Show initial tab
     this.switchTab("sucodev");
-
-    // Add click listeners
     this.tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const tabId = button.getAttribute("data-tab");
@@ -76,7 +69,6 @@ class ExperienceTabs {
   }
 }
 
-// Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   new ExperienceTabs();
 });

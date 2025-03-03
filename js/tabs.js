@@ -18,14 +18,12 @@ class TabSystem {
   }
 
   async switchTab(tabId) {
-    // Remove active class from all buttons
     this.tabButtons.forEach((btn) => {
       btn.classList.remove("active");
       btn.classList.remove("bg-yellow-400");
       btn.classList.add("bg-opacity-20");
     });
 
-    // Add active class to clicked button
     const activeButton = document.querySelector(`[data-tab="${tabId}"]`);
     if (activeButton) {
       activeButton.classList.add("active");
@@ -33,7 +31,6 @@ class TabSystem {
       activeButton.classList.add("bg-opacity-20");
     }
 
-    // Load and display content with fade animation
     const content = await this.loadTemplate(tabId);
     this.tabContent.style.opacity = "0";
     setTimeout(() => {
@@ -43,10 +40,7 @@ class TabSystem {
   }
 
   init() {
-    // Show initial tab
     this.switchTab("overview");
-
-    // Add click listeners
     this.tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const tabId = button.getAttribute("data-tab");
@@ -58,7 +52,6 @@ class TabSystem {
   }
 }
 
-// Initialize when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   new TabSystem();
 });
