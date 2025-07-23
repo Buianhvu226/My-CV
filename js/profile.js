@@ -1,7 +1,8 @@
 const phrases = [
-  "Hi, I'm Bui Anh Vu",
-  "I'm an IT Student majoring in Software Engineering",
-  "Currently working as an Intern at DAC - Data Technology Vietnam",
+  "Welcome to my Portfolio!",
+  "I'm a Full-Stack Developer",
+  "Specializing in AI Integration",
+  "Open to new opportunities and collaborations",
 ];
 
 let phraseIndex = 0;
