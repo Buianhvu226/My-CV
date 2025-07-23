@@ -1,13 +1,22 @@
-class TabSystem {
-  constructor() {
-    this.tabButtons = document.querySelectorAll(".tab-btn");
-    this.tabContent = document.querySelector(".tab-content");
+export class TabSystem {
+  constructor(
+    buttonSelector,
+    contentSelector,
+    initialTab,
+    templatePrefix = ""
+  ) {
+    this.tabButtons = document.querySelectorAll(buttonSelector);
+    this.tabContent = document.querySelector(contentSelector);
+    this.initialTab = initialTab;
+    this.templatePrefix = templatePrefix;
     this.init();
   }
 
   async loadTemplate(templateName) {
     try {
-      const response = await fetch(`templates/${templateName}.html`);
+      const response = await fetch(
+        `templates/${this.templatePrefix}${templateName}.html`
+      );
       if (!response.ok)
         throw new Error(`HTTP error! status: ${response.status}`);
       return await response.text();
@@ -40,18 +49,25 @@ class TabSystem {
   }
 
   init() {
-    this.switchTab("overview");
+    if (this.tabButtons.length === 0 || !this.tabContent) {
+      return;
+    }
+    this.switchTab(this.initialTab);
     this.tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const tabId = button.getAttribute("data-tab");
         this.switchTab(tabId);
       });
     });
-
-    
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  new TabSystem();
+  new TabSystem(".tab-btn", ".tab-content", "overview");
+  new TabSystem(
+    ".exp-tab-btn",
+    ".exp-tab-content",
+    "dac",
+    "experience-"
+  );
 });
